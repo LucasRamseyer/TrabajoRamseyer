@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    background-image: linear-gradient(to left, grey, #dfdfe7);
+    }
+header{
+    background-image: linear-gradient(to right, rgb(226, 180, 226), rgb(194, 170, 170));
+    border: 0.3rem solid black;
+}
+header h1{
+    grid-area: h1;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0.5rem;
+    font-size: 3rem;
+
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+nav ul li{
+    list-style: none;
+    background-color: white;
+    margin: 0.5rem;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+main{
+    display: grid;
+    grid-template-areas: "prim"
+                        "img"
+                        "seg";  
+    justify-content: center;   
+    padding: 1.5rem;
+    margin: 1.5rem;         
+}
+.primera{
+    grid-area: prim;
+    padding: 0.2rem;
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    border: dotted black 0.2rem;
+
+}
+main .primera h2{
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: rgba(231, 226, 226, 0.205);
+    margin: 1rem;
+    padding: 1rem;
+
+}
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+
+
+}
+main .imgInd{
+    grid-area: img;
+    transform: scale(60%);
+
+}
+.segunda{
+    display: none;
+    background-color: rgb(195, 221, 195);
+    grid-area: seg;
+    margin: 4rem;
+    padding: 4rem;
+}
+footer{
+    text-align: center;
+    background-image: linear-gradient(to left, black, white);
+}
+
+@media only screen and (min-width:600px){
+    .primera{
+        border: none;
+    }
+    .segunda{
+        display: contents;
+    }
+    main .imgInd{
+        transform: scale(80%);
+        padding: 2rem;
+        margin: 2rem;
+    }
+}
+@media only screen and (min-width:1024px){
+    main{
+        grid-template-areas: "prim prim"
+                            "img seg";
+    }
+    main .imgInd{
+        transform: scale(100%);
+        padding: 1rem;
+        margin: 1rem;
+    }
+    .footer{
+        text-align: left;
+    }
+    footer .yoFoot{
+        text-align: right;
+    }
+}
+
+/*pages*/
+
+/*Nosotros*/
+.mainNos{
+    display: grid;
+    grid-template-areas: "h2"
+                        "texto"
+                        "div";
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.mainNos h2{
+    grid-area: h2;
+    background-color: red;
+}
+.divMainN{
+    grid-area: texto;
+}
+.sectionN{
+    grid-area: div;
+}
+.sectionN .imageNos{
+        transform: scale(70%);
+
+}
+.pSectionNosotros{
+    display: none;
+}
+
+.pSectionNosotros{
+    text-align: center;
+    margin: 2rem;
+    padding: 1.5rem;
+}
+@media only screen and (min-width:600px){
+
+.pSectionNosotros{
+        display: contents;
+    }
+}
+@media only screen and (min-width:1024px){
+
+}
+ /*trabajos*/
+ .mainT{
+     text-align: center;
+ }
+ .imgTrab{
+     transform: scale(60%);
+ }
+@media only screen and (min-width:600px){
+.imgTrab{
+    transform: scale(80%);
+}
+}
+@media only screen and (min-width:1024px){
+.imgTrab{
+        transform: scale(100%);
+    }  
+}
+ /*material*/
+
+ .materialA{
+     display: grid;
+     grid-template-areas: "p"
+                            "s1"
+                            "s2"
+                            "s3";
+    justify-content: center;
+ }
+ .mainMat{
+     grid-area: p;
+ }
+ .sectionM1{
+    grid-area: s1;
+ }
+ .sectionM2{
+    grid-area: s2;
+ }
+
+ .sectionM3{
+    grid-area: s3;
+    display: none;
+ }
+ .imgMat{
+     transform: scale(50%);
+ }
+ @media only screen and (min-width:600px){
+
+}
+@media only screen and (min-width:1024px){
+    .sectionM3{
+        grid-area: s3;
+        display: contents;
+}
+.imgMat{
+    transform: scale(100%);
+}
+ /*contacto*/
+ .divContacto{
+     grid-template-areas: "P"
+                            "form";
+ }
+ .pContact{
+     text-align: justify;
+     height: 10%;
+     grid-area: p;
+     padding: 3rem;
+     margin: 1rem;
+ }
+ .formulario{
+     height: 60%;
+     grid-area: form;
+     margin: 2rem;
+ }
