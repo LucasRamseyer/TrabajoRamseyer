@@ -25,6 +25,11 @@ nav ul{
     flex-wrap: wrap;
     justify-content: center;
 }
+nav ul li:hover{
+    transform: scale(1.2);
+    background-color: rgb(129, 120, 129);
+    box-shadow: -0.2rem -0.2rem rgb(100, 99, 99);
+}
 nav ul li{
     list-style: none;
     background-color: white;
@@ -94,28 +99,64 @@ footer{
     .segunda{
         display: contents;
     }
-    main .imgInd{
+    .scale-in-ver-bottom{
         transform: scale(80%);
         padding: 2rem;
         margin: 2rem;
-    }
+        }
 }
+
 @media only screen and (min-width:1024px){
     main{
         grid-template-areas: "prim prim"
                             "img seg";
     }
-    main .imgInd{
-        transform: scale(100%);
-        padding: 1rem;
-        margin: 1rem;
+    .scale-in-ver-bottom {
+        -webkit-animation: scale-in-ver-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                animation: scale-in-ver-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        padding: 2rem;
+        margin: 2rem;
     }
+
+     @-webkit-keyframes scale-in-ver-bottom {
+        0% {
+          -webkit-transform: scaleY(0);
+                  transform: scaleY(0);
+          -webkit-transform-origin: 0% 100%;
+                  transform-origin: 0% 100%;
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: scaleY(1);
+                  transform: scaleY(1);
+          -webkit-transform-origin: 0% 100%;
+                  transform-origin: 0% 100%;
+          opacity: 1;
+        }
+      }
+      @keyframes scale-in-ver-bottom {
+        0% {
+          -webkit-transform: scaleY(0);
+                  transform: scaleY(0);
+          -webkit-transform-origin: 0% 100%;
+                  transform-origin: 0% 100%;
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: scaleY(1);
+                  transform: scaleY(1);
+          -webkit-transform-origin: 0% 100%;
+                  transform-origin: 0% 100%;
+          opacity: 1;
+        }
+      }
     .footer{
         text-align: left;
     }
     footer .yoFoot{
         text-align: right;
     }
+
 }
 
 /*pages*/
@@ -176,8 +217,11 @@ footer{
 }
 @media only screen and (min-width:1024px){
 .imgTrab{
-        transform: scale(100%);
+        transform: rotate(10deg);
     }  
+.imgTrab:hover{
+    transform: rotate(0deg);
+}
 }
  /*material*/
 
@@ -234,3 +278,8 @@ footer{
      grid-area: form;
      margin: 2rem;
  }
+
+ }
+
+
+  
