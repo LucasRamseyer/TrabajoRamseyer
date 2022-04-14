@@ -4,86 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <title>Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <title>Lucas Ramseyer</title>
 </head>
 <body>
-    <div class="body">
-        <header class="header">
-            <h1 class="animate__animated animate__rubberBand">Frida Amoblamientos</h1>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="trabajos.html">Trabajos</a></li>
-                <li><a href="material.html">Material</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-        <div class="divContacto">
-            <p class="pContact">
+    <div class="container">
+    <header class="row">
+        <h1 class="col-12 text-center animate__animated animate__rubberBand">Frida Amoblamientos</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">Inicio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="trabajos.html">Trabajos</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="material.html">Material</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+    </nav>
+        <h2 class="text-center">Contacto</h2>
+            <p class="text-center">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo nemo sapiente non, illo magnam debitis aut et adipisci voluptas, ratione doloribus eius pariatur saepe dolorum, laudantium quidem quia voluptatem a?
             </p>
 
         <div class="formulario">
-            <form action="">
-                <fieldset>
-                    <legend>
-                        Tambien puede darjarnos su consulta
-                    </legend>
-        
-                    <div>
-                        <label for="nombre">Nombre Completo</label>
-                        <input type="text" name="nombre">
-                    </div>
-                    <div>
-                        <label for="email">email</label>
-                        <input type="email" name="email">
-                    </div>
-                    <div>
-                        <label for="ciudad">Ciudad</label>
-                        <select name="ciudad" id="">
-                            <option value="Santa Fe">Santa Fe</option>
-                            <option value="Santo Tome">Santo Tome</option>
-                            <option value="Recreo">Recreo</option>
-                            <option value="Reconquista">Reconquista</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="numero">Telefono</label>
-                        <input type="tel" name="numero">
-                    </div>
-                    
-                    <div>
-                        <label for="consulta">Su Consulta</label>
-                        <input type="text" name="consulta">
-                    </div>
-                    <div>
-                        <input type="submit" value="Enviar">
-                        <input type="reset" value="Borrar Todo">
-                    </div>
-                </fieldset>
-            </form>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="ejemplo@correo.com">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Consulta</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">Enviar</button>
+              </div>
         </div>
         </div>
 
-        <footer>
-            <div class="footer">
-                <h3>Todos los derechos reservados</h3>
-                 <div>
-                <a href="#header">Ir Arriba</a>
-                </div>
-                <p>
-                    Creado por
-                    <a href="https:/www.instagram.com/LucasRamseyer" target="_blank">Lucas Ramseyer </a>
-                </p>
-            </div>
-        </footer>
+    <footer class="row foot">
+            <h3 class="col-8 hFoot">Todos los derechos reservados</h3>
+            <p class="col-4">
+                Creado por
+                <a href="https:/www.instagram.com/LucasRamseyer" target="_blank">Lucas Ramseyer </a>
+            </p>
+    </footer>
     </div>
     
 </body>
 </html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
