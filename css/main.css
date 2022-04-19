@@ -19,6 +19,12 @@ header h1{
     font-size: 3rem;
 
 }
+nav{
+    background-image: linear-gradient(to left, rgb(95, 92, 92), rgba(255, 255, 255, 0.705));
+}
+.navDrop{
+    background-image: linear-gradient(to left, rgb(95, 92, 92), rgba(255, 255, 255, 0.705));
+}
 
 nav ul{
     display: flex;
@@ -26,17 +32,14 @@ nav ul{
     justify-content: center;
 }
 nav ul li:hover{
-    transform: scale(1.2);
-    background-color: rgb(129, 120, 129);
-    box-shadow: -0.2rem -0.2rem rgb(100, 99, 99);
+    transform: scale(1.1);
+
 }
 nav ul li{
-    list-style: none;
-    background-color: white;
-    margin: 0.5rem;
-    padding: 0.8rem;
-    border-radius: 1rem;
-    font-size: 1.4rem;
+    margin: 0.4rem;
+    padding: 0.1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
     text-align: center;
     text-decoration: none;
 }
@@ -61,7 +64,7 @@ main{
     border: dotted black 0.2rem;
 
 }
-main .primera h2{
+h2{
     font-size: 1.5rem;
     text-align: center;
     background-color: rgba(231, 226, 226, 0.205);
@@ -173,7 +176,6 @@ footer{
 }
 .mainNos h2{
     grid-area: h2;
-    background-color: red;
 }
 .divMainN{
     grid-area: texto;
@@ -201,39 +203,53 @@ footer{
     }
 }
 @media only screen and (min-width:1024px){
+.sectionN{
+    display: flex;
+    align-items: center;
+}
 
 }
  /*trabajos*/
  .mainT{
+     grid-template-areas: "h2"
+                        "texto"
+                        "carro";
      text-align: center;
  }
- .imgTrab{
-     transform: scale(60%);
+ .mainT h2{
+     grid-area: h2;
  }
-@media only screen and (min-width:600px){
-.imgTrab{
-    transform: scale(80%);
+ .mainT p{
+
+     grid-area: texto;
+ }
+.carro{
+    grid-area: carro;
+    margin: 2rem;
 }
+
+@media only screen and (min-width:600px){
+
 }
 @media only screen and (min-width:1024px){
-.imgTrab{
-        transform: rotate(10deg);
-    }  
-.imgTrab:hover{
-    transform: rotate(0deg);
-}
+
 }
  /*material*/
 
  .materialA{
      display: grid;
-     grid-template-areas: "p"
+     grid-template-areas:   "h2"
+                            "p"
                             "s1"
                             "s2"
                             "s3";
     justify-content: center;
  }
- .mainMat{
+ h2{
+     grid-area: h2;
+ }
+ .pMainM{
+     margin: 2rem;
      grid-area: p;
  }
  .sectionM1{
@@ -250,24 +266,39 @@ footer{
  .imgMat{
      transform: scale(50%);
  }
- @media only screen and (min-width:600px){
+@media only screen and (min-width:600px){
 
 }
 @media only screen and (min-width:1024px){
+    .sectionM{
+        display: flex;
+        margin: 2rem;
+        align-items: center;
+    }
+    .sectionM2{
+        display: flex;
+        margin: 2rem;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
     .sectionM3{
         grid-area: s3;
-        display: contents;
+        display: flex;
+        margin: 1rem;
+        justify-content: center;
+        transform: scale(100%);
+        }
 }
 .imgMat{
-    transform: scale(100%);
+    transform: scale(80%);
 }
  /*contacto*/
  .divContacto{
-     grid-template-areas: "P"
+     grid-template-areas: "p"
                             "form";
  }
  .pContact{
-     text-align: justify;
+     text-align: center;
      height: 10%;
      grid-area: p;
      padding: 3rem;
@@ -277,6 +308,7 @@ footer{
      height: 60%;
      grid-area: form;
      margin: 2rem;
+     padding: 1rem;
  }
 
  }
