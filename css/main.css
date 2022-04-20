@@ -26,11 +26,7 @@ nav{
     background-image: linear-gradient(to left, rgb(95, 92, 92), rgba(255, 255, 255, 0.705));
 }
 
-nav ul{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+
 nav ul li:hover{
     transform: scale(1.1);
 
@@ -309,9 +305,4 @@ footer{
      grid-area: form;
      margin: 2rem;
      padding: 1rem;
- }
-
- }
-
-
-  
+ } 
