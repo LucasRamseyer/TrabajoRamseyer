@@ -1,0 +1,290 @@
+$color-headfoot: rgba(168, 163, 163, 0.664);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to left, grey, #dfdfe7, grey);
+}
+header{
+    background-color: $color-headfoot;
+    border: 0.3rem solid black;
+    h1{
+    grid-area: h1;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0.5rem;
+    font-size: 3rem;
+    }
+}
+nav{
+    background-image: linear-gradient(to left, grey, #dfdfe7, grey);
+    .navDrop{
+        background-color: rgba(206, 201, 201, 0.753);
+    }
+    ul{
+        
+        li{
+        margin: 0.4rem;
+        padding: 0.1rem;
+        border: 0.1rem black solid;
+        font-size: 1rem;
+        text-align: center;
+        text-decoration: none;
+    }
+        li:hover{
+        transform: scale(1.1);
+        background-color: $color-headfoot;
+        }
+    }
+}
+main{
+    display: grid;
+    grid-template-areas: "h2"
+                        "prim"
+                        "img"
+                        "seg";  
+    justify-content: center;   
+    padding: 1.5rem;
+    margin: 1.5rem;
+    h2{
+    grid-area: h2;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: rgba(231, 226, 226, 0.205);
+    margin: 1rem;
+    padding: 1rem;
+
+    }
+    .bienv{
+    grid-area: prim;
+    padding: 0.2rem;
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    }
+    
+    .imgInd{
+    grid-area: img;
+    transform: scale(60%);   
+    }
+    .segunda{
+    display: none;
+    background-color: rgb(195, 221, 195);
+    grid-area: seg;
+    text-align: justify;
+    align-items: center;
+    }
+}
+footer{
+    text-align: center;
+    background-color: $color-headfoot;
+}
+@media only screen and (min-width:600px){
+    .primera{
+        border: none;
+    }
+    .segunda{
+        display: contents;
+    }
+    .imgInd{
+        transform: scale(80%);
+        padding: 2rem;
+        margin: 2rem;
+        }
+}
+@media only screen and (min-width:1024px){
+    main{
+        grid-template-areas: "h2 h2"
+                            "prim prim"
+                            "img seg";
+        .imgInd{
+                transform: scale(100%);
+        }
+        .segunda{
+            display: contents;
+            align-items: center;
+
+        }
+    }
+    
+    .footer{
+        text-align: left;
+        .yoFoot{
+            text-align: right;
+        }
+    }
+    
+}
+
+/*Nosotros*/
+.mainNos{
+    display: grid;
+    grid-template-areas: "h2"
+                        "texto"
+                        "div";
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    h2{
+        font-size: 1.5rem;
+        text-align: center;
+        background-color: rgba(231, 226, 226, 0.205);
+        margin: 1rem;
+        padding: 1rem;
+        grid-area: h2;
+    }
+    .divMainN{
+        grid-area: texto;
+    }
+    .sectionN{
+        grid-area: div;
+        .imageNos{
+            transform: scale(70%);
+    
+    }
+    }
+}
+.pSectionNosotros{
+    display: none;
+    text-align: center;
+    margin: 2rem;
+    padding: 1.5rem;
+}
+@media only screen and (min-width:600px){
+
+    .pSectionNosotros{
+            display: contents;
+        }
+    }
+    @media only screen and (min-width:1024px){
+    .sectionN{
+        display: flex;
+        align-items: center;
+    }
+}
+
+/*trabajos*/
+.mainT{
+    grid-template-areas: "h2"
+                       "texto"
+                       "carro";
+    text-align: center;
+    h2{
+        font-size: 1.5rem;
+        text-align: center;
+        background-color: rgba(231, 226, 226, 0.205);
+        margin: 1rem;
+        padding: 1rem;
+        grid-area: h2;
+    }
+    p{
+        text-align: center;
+        grid-area: texto;
+    }
+   .carro{
+       grid-area: carro;
+       margin: 2rem;
+       padding: 2rem;
+   }
+}
+@media only screen and (min-width:600px){
+
+}
+@media only screen and (min-width:1024px){
+
+}
+
+/*material*/
+
+.materialA{
+    display: grid;
+    grid-template-areas:   "h2"
+                           "p"
+                           "s1"
+                           "s2"
+                           "s3";
+   justify-content: center;
+   h2{
+       grid-area: h2;
+       font-size: 1.5rem;
+       text-align: center;
+       background-color: rgba(231, 226, 226, 0.205);
+       margin: 1rem;
+       padding: 1rem;
+    }
+    .pMainM{
+       margin: 2rem;
+       grid-area: p;
+    }
+    .sectionM{
+       grid-area: s1;
+    }
+    .sectionM2{
+       grid-area: s2;
+    }
+
+    .sectionM3{
+       grid-area: s3;
+       display: none;
+    }
+}
+.imgMat{
+    transform: scale(50%);
+}
+@media only screen and (min-width:600px){
+
+}
+@media only screen and (min-width:1024px){
+    .sectionM{
+        display: flex;
+        margin: 2rem;
+        align-items: center;
+    }
+    .sectionM2{
+        display: flex;
+        margin: 2rem;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+    .sectionM3{
+        grid-area: s3;
+        display: content flex;
+        margin: 1rem;
+        justify-content: center;
+        transform: scale(100%);
+        }
+    .imgMat{
+        transform: scale(80%);
+    }
+}
+/*contacto*/
+.divContacto{
+    grid-template-areas: "h2"
+                            "p"
+                           "form";
+    h2{
+        font-size: 1.5rem;
+        text-align: center;
+        background-color: rgba(231, 226, 226, 0.205);
+        margin: 1rem;
+        padding: 1rem;
+    }
+    .pContact{
+        text-align: center;
+        height: 10%;
+        grid-area: p;
+        padding: 3rem;
+        margin: 1rem;
+    }
+    .formulario{
+        height: 60%;
+        grid-area: form;
+        margin: 2rem;
+        padding: 1rem;
+    }
+}

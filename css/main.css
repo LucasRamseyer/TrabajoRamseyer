@@ -1,308 +1,211 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-.body{
-    background-image: linear-gradient(to left, grey, #dfdfe7);
-    }
-header{
-    background-image: linear-gradient(to right, rgb(226, 180, 226), rgb(194, 170, 170));
-    border: 0.3rem solid black;
-}
-header h1{
+body {
+  background-image: linear-gradient(to left, grey, #dfdfe7, grey); }
+
+header {
+  background-color: rgba(168, 163, 163, 0.664);
+  border: 0.3rem solid black; }
+  header h1 {
     grid-area: h1;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 0.5rem;
-    font-size: 3rem;
+    font-size: 3rem; }
 
-}
-nav{
-    background-image: linear-gradient(to left, rgb(95, 92, 92), rgba(255, 255, 255, 0.705));
-}
-.navDrop{
-    background-image: linear-gradient(to left, rgb(95, 92, 92), rgba(255, 255, 255, 0.705));
-}
-
-
-nav ul li:hover{
-    transform: scale(1.1);
-
-}
-nav ul li{
+nav {
+  background-image: linear-gradient(to left, grey, #dfdfe7, grey); }
+  nav .navDrop {
+    background-color: rgba(206, 201, 201, 0.753); }
+  nav ul li {
     margin: 0.4rem;
     padding: 0.1rem;
-    border-radius: 0.5rem;
+    border: 0.1rem black solid;
     font-size: 1rem;
     text-align: center;
-    text-decoration: none;
-}
+    text-decoration: none; }
+  nav ul li:hover {
+    transform: scale(1.1);
+    background-color: rgba(168, 163, 163, 0.664); }
 
-main{
-    display: grid;
-    grid-template-areas: "prim"
-                        "img"
-                        "seg";  
-    justify-content: center;   
-    padding: 1.5rem;
-    margin: 1.5rem;         
-}
-.primera{
+main {
+  display: grid;
+  grid-template-areas: "h2" "prim" "img" "seg";
+  justify-content: center;
+  padding: 1.5rem;
+  margin: 1.5rem; }
+  main h2 {
+    grid-area: h2;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: rgba(231, 226, 226, 0.205);
+    margin: 1rem;
+    padding: 1rem; }
+  main .bienv {
     grid-area: prim;
     padding: 0.2rem;
     display: inline-block;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     text-overflow: ellipsis;
-    font-size: 1rem;
-    border: dotted black 0.2rem;
+    font-size: 1rem; }
+  main .imgInd {
+    grid-area: img;
+    transform: scale(60%); }
+  main .segunda {
+    display: none;
+    background-color: #c3ddc3;
+    grid-area: seg;
+    text-align: justify;
+    align-items: center; }
 
-}
-h2{
+footer {
+  text-align: center;
+  background-color: rgba(168, 163, 163, 0.664); }
+
+@media only screen and (min-width: 600px) {
+  .primera {
+    border: none; }
+  .segunda {
+    display: contents; }
+  .imgInd {
+    transform: scale(80%);
+    padding: 2rem;
+    margin: 2rem; } }
+
+@media only screen and (min-width: 1024px) {
+  main {
+    grid-template-areas: "h2 h2" "prim prim" "img seg"; }
+    main .imgInd {
+      transform: scale(100%); }
+    main .segunda {
+      display: contents;
+      align-items: center; }
+  .footer {
+    text-align: left; }
+    .footer .yoFoot {
+      text-align: right; } }
+
+/*Nosotros*/
+.mainNos {
+  display: grid;
+  grid-template-areas: "h2" "texto" "div";
+  align-items: center;
+  text-align: center;
+  justify-content: center; }
+  .mainNos h2 {
     font-size: 1.5rem;
     text-align: center;
     background-color: rgba(231, 226, 226, 0.205);
     margin: 1rem;
     padding: 1rem;
+    grid-area: h2; }
+  .mainNos .divMainN {
+    grid-area: texto; }
+  .mainNos .sectionN {
+    grid-area: div; }
+    .mainNos .sectionN .imageNos {
+      transform: scale(70%); }
 
-}
-p{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: justify;
+.pSectionNosotros {
+  display: none;
+  text-align: center;
+  margin: 2rem;
+  padding: 1.5rem; }
 
+@media only screen and (min-width: 600px) {
+  .pSectionNosotros {
+    display: contents; } }
 
-}
-main .imgInd{
-    grid-area: img;
-    transform: scale(60%);
-
-}
-.segunda{
-    display: none;
-    background-color: rgb(195, 221, 195);
-    grid-area: seg;
-    margin: 4rem;
-    padding: 4rem;
-}
-footer{
-    text-align: center;
-    background-image: linear-gradient(to left, black, white);
-}
-
-@media only screen and (min-width:600px){
-    .primera{
-        border: none;
-    }
-    .segunda{
-        display: contents;
-    }
-    .scale-in-ver-bottom{
-        transform: scale(80%);
-        padding: 2rem;
-        margin: 2rem;
-        }
-}
-
-@media only screen and (min-width:1024px){
-    main{
-        grid-template-areas: "prim prim"
-                            "img seg";
-    }
-    .scale-in-ver-bottom {
-        -webkit-animation: scale-in-ver-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                animation: scale-in-ver-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        padding: 2rem;
-        margin: 2rem;
-    }
-
-     @-webkit-keyframes scale-in-ver-bottom {
-        0% {
-          -webkit-transform: scaleY(0);
-                  transform: scaleY(0);
-          -webkit-transform-origin: 0% 100%;
-                  transform-origin: 0% 100%;
-          opacity: 1;
-        }
-        100% {
-          -webkit-transform: scaleY(1);
-                  transform: scaleY(1);
-          -webkit-transform-origin: 0% 100%;
-                  transform-origin: 0% 100%;
-          opacity: 1;
-        }
-      }
-      @keyframes scale-in-ver-bottom {
-        0% {
-          -webkit-transform: scaleY(0);
-                  transform: scaleY(0);
-          -webkit-transform-origin: 0% 100%;
-                  transform-origin: 0% 100%;
-          opacity: 1;
-        }
-        100% {
-          -webkit-transform: scaleY(1);
-                  transform: scaleY(1);
-          -webkit-transform-origin: 0% 100%;
-                  transform-origin: 0% 100%;
-          opacity: 1;
-        }
-      }
-    .footer{
-        text-align: left;
-    }
-    footer .yoFoot{
-        text-align: right;
-    }
-
-}
-
-/*pages*/
-
-/*Nosotros*/
-.mainNos{
-    display: grid;
-    grid-template-areas: "h2"
-                        "texto"
-                        "div";
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-.mainNos h2{
-    grid-area: h2;
-}
-.divMainN{
-    grid-area: texto;
-}
-.sectionN{
-    grid-area: div;
-}
-.sectionN .imageNos{
-        transform: scale(70%);
-
-}
-.pSectionNosotros{
-    display: none;
-}
-
-.pSectionNosotros{
-    text-align: center;
-    margin: 2rem;
-    padding: 1.5rem;
-}
-@media only screen and (min-width:600px){
-
-.pSectionNosotros{
-        display: contents;
-    }
-}
-@media only screen and (min-width:1024px){
-.sectionN{
+@media only screen and (min-width: 1024px) {
+  .sectionN {
     display: flex;
-    align-items: center;
-}
+    align-items: center; } }
 
-}
- /*trabajos*/
- .mainT{
-     grid-template-areas: "h2"
-                        "texto"
-                        "carro";
-     text-align: center;
- }
- .mainT h2{
-     grid-area: h2;
- }
- .mainT p{
-
-     grid-area: texto;
- }
-.carro{
+/*trabajos*/
+.mainT {
+  grid-template-areas: "h2" "texto" "carro";
+  text-align: center; }
+  .mainT h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: rgba(231, 226, 226, 0.205);
+    margin: 1rem;
+    padding: 1rem;
+    grid-area: h2; }
+  .mainT p {
+    text-align: center;
+    grid-area: texto; }
+  .mainT .carro {
     grid-area: carro;
     margin: 2rem;
-}
+    padding: 2rem; }
 
-@media only screen and (min-width:600px){
-
-}
-@media only screen and (min-width:1024px){
-
-}
- /*material*/
-
- .materialA{
-     display: grid;
-     grid-template-areas:   "h2"
-                            "p"
-                            "s1"
-                            "s2"
-                            "s3";
-    justify-content: center;
- }
- h2{
-     grid-area: h2;
- }
- .pMainM{
-     margin: 2rem;
-     grid-area: p;
- }
- .sectionM1{
-    grid-area: s1;
- }
- .sectionM2{
-    grid-area: s2;
- }
-
- .sectionM3{
+/*material*/
+.materialA {
+  display: grid;
+  grid-template-areas: "h2" "p" "s1" "s2" "s3";
+  justify-content: center; }
+  .materialA h2 {
+    grid-area: h2;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: rgba(231, 226, 226, 0.205);
+    margin: 1rem;
+    padding: 1rem; }
+  .materialA .pMainM {
+    margin: 2rem;
+    grid-area: p; }
+  .materialA .sectionM {
+    grid-area: s1; }
+  .materialA .sectionM2 {
+    grid-area: s2; }
+  .materialA .sectionM3 {
     grid-area: s3;
-    display: none;
- }
- .imgMat{
-     transform: scale(50%);
- }
-@media only screen and (min-width:600px){
+    display: none; }
 
-}
-@media only screen and (min-width:1024px){
-    .sectionM{
-        display: flex;
-        margin: 2rem;
-        align-items: center;
-    }
-    .sectionM2{
-        display: flex;
-        margin: 2rem;
-        align-items: center;
-        flex-direction: row-reverse;
-    }
-    .sectionM3{
-        grid-area: s3;
-        display: flex;
-        margin: 1rem;
-        justify-content: center;
-        transform: scale(100%);
-        }
-}
-.imgMat{
-    transform: scale(80%);
-}
- /*contacto*/
- .divContacto{
-     grid-template-areas: "p"
-                            "form";
- }
- .pContact{
-     text-align: center;
-     height: 10%;
-     grid-area: p;
-     padding: 3rem;
-     margin: 1rem;
- }
- .formulario{
-     height: 60%;
-     grid-area: form;
-     margin: 2rem;
-     padding: 1rem;
- } 
+.imgMat {
+  transform: scale(50%); }
+
+@media only screen and (min-width: 1024px) {
+  .sectionM {
+    display: flex;
+    margin: 2rem;
+    align-items: center; }
+  .sectionM2 {
+    display: flex;
+    margin: 2rem;
+    align-items: center;
+    flex-direction: row-reverse; }
+  .sectionM3 {
+    grid-area: s3;
+    display: content flex;
+    margin: 1rem;
+    justify-content: center;
+    transform: scale(100%); }
+  .imgMat {
+    transform: scale(80%); } }
+
+/*contacto*/
+.divContacto {
+  grid-template-areas: "h2" "p" "form"; }
+  .divContacto h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: rgba(231, 226, 226, 0.205);
+    margin: 1rem;
+    padding: 1rem; }
+  .divContacto .pContact {
+    text-align: center;
+    height: 10%;
+    grid-area: p;
+    padding: 3rem;
+    margin: 1rem; }
+  .divContacto .formulario {
+    height: 60%;
+    grid-area: form;
+    margin: 2rem;
+    padding: 1rem; }
