@@ -1,4 +1,5 @@
-$color-headfoot: rgba(168, 163, 163, 0.664);
+@import "utilities/variables";
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@700&family=Roboto:wght@300&display=swap');
 
 *{
     margin: 0;
@@ -14,15 +15,19 @@ header{
     h1{
     grid-area: h1;
     text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 0.5rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    font-family: 'Chivo', sans-serif, 'Roboto';
+    text-transform: uppercase;
     }
 }
 nav{
     background-image: linear-gradient(to left, grey, #dfdfe7, grey);
     .navDrop{
         background-color: rgba(206, 201, 201, 0.753);
+        &:hover{
+            background-color: $color-headfoot;
+            }
     }
     ul{
         
@@ -33,11 +38,12 @@ nav{
         font-size: 1rem;
         text-align: center;
         text-decoration: none;
+        &:hover{
+            transform: scale(1.1);
+            background-color: $color-headfoot;
+            }
     }
-        li:hover{
-        transform: scale(1.1);
-        background-color: $color-headfoot;
-        }
+    
     }
 }
 main{
@@ -83,7 +89,11 @@ main{
 footer{
     text-align: center;
     background-color: $color-headfoot;
+    h3{
+        font-size: 1rem;
+    }
 }
+
 @media only screen and (min-width:600px){
     .primera{
         border: none;
@@ -96,6 +106,7 @@ footer{
         padding: 2rem;
         margin: 2rem;
         }
+
 }
 @media only screen and (min-width:1024px){
     main{
@@ -112,13 +123,23 @@ footer{
         }
     }
     
-    .footer{
+    footer{
+        display: grid;
+        grid-template-areas: "h3 h3"
+                            "insta lucas";
+        grid-template-columns: 2fr 0.002fr;
         text-align: left;
-        .yoFoot{
+        h3{
+            grid-area: h3;
+        }
+        p{
+            grid-area: lucas;
             text-align: right;
         }
-    }
-    
+        .logoF{
+            grid-area: insta;
+        }
+    } 
 }
 
 /*Nosotros*/
