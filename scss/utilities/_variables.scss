@@ -1,7 +1,15 @@
 $color-headfoot: rgba(231, 226, 226, 0.205);
 
 //mixin
+@mixin font-text {
+    font-family: 'Ms Madi', cursive;
+    font-size: 2rem;
+}
 
 //extend
-
+%estilos{
+    font-family: 'Water Brush', cursive;
+    font-size: 6rem;
+};
 //map
+$mapa:(borde-solid:black 0.5px solid, borde-puntiti: black 1.2px dotted, borde-sfino: black 0.2px solid)
