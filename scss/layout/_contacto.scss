@@ -1,0 +1,43 @@
+@import "../utilities/fonts";
+@import "../utilities/variables";
+@import "../layout/queries";
+
+.mainContacto{
+    @extend %fCenter;
+    flex-direction: column;
+    @extend %kalam;
+    @include desktop{
+        display: grid;
+        grid-template-areas: "h1 h1"
+                            "texto form";
+    }
+    .textoContacto{
+        grid-area: texto;
+        @extend %caveat;
+        font-size: 2rem;
+        
+    .mapa{
+        grid-area: mapa;
+        iframe{
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+
+        }
+    } 
+    .correoMob{
+        @include desktop{
+            display: none;}
+    }   
+    }
+    
+    .formulario{
+        display: none;
+        grid-area: form;
+        @include desktop{
+            display: block;
+            align-content: center;
+        }
+    }
+
+}

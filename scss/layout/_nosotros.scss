@@ -1,0 +1,39 @@
+@import "../utilities/fonts";
+@import "../utilities/variables";
+@import "../layout/queries";
+
+.mainNos{
+ justify-content: center;
+ @extend %kalam;
+    img{
+        display: block;
+        margin: 0 auto;
+     }
+    .carroContainer{
+        display: none;
+
+    }
+@include desktop{
+    display: grid;
+    grid-template-areas: "h1 h1"
+                        "carr texto";
+    h1{
+        grid-area: h1;
+    }
+    p{
+        grid-area: texto;
+        align-items: center;
+    }
+    img{
+        display: none;
+    }
+    .carroContainer{
+        display: block;
+        grid-area: carr;
+        margin: 1rem 5rem 1rem 5rem;
+        width: 350px;
+        height: 350px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.562);
+    }
+}
+}

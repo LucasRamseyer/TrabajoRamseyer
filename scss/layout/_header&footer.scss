@@ -1,0 +1,65 @@
+@import "../utilities/fonts";
+@import "../utilities/variables";
+@import "queries";
+
+
+header{
+    display: grid;
+    grid-template-areas: "logo"
+                        "redes"
+                        "nave";
+    background-color: $color-headfoot;
+    .logazo{
+        grid-area: logo;
+        display: flex;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+    .redes{
+        grid-area: redes;
+        display: flex;
+        justify-content: center;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        @include desktop{
+            justify-content: end;
+        }
+        a{
+            margin-left: 1rem;
+        }
+    }
+    nav{
+        @extend %kalam;
+        grid-area: nave;
+        display: inline;
+        background-color: $color-headfoot;
+        list-style: none;
+        ul{
+            li{
+                @extend %fCenter;
+                &:hover{scale: 1.1;
+                text-shadow: -1px 1px 1px rgba(245, 245, 245, 0.623);
+                }
+            }
+        }
+    }
+    
+        
+}
+
+footer{
+    background-color: $color-foot;
+    margin: 2rem 0.2rem 0.2rem 0.2rem;
+    @extend %fCenter;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    p{
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}

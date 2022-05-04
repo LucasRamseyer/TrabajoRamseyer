@@ -1,0 +1,65 @@
+@import "../utilities/fonts";
+@import "../utilities/variables";
+@import "queries";
+
+
+main{
+    display: grid;
+    @extend %kalam;
+
+    h1{
+        margin-top: 2rem;
+        @extend %fCenter;
+    }
+    p{
+        @extend %fCenter;
+        margin: 2rem;
+        text-align: center;
+    }
+    .divLargo{
+        display: flex;
+        justify-content: space-around;
+        .imgInc{
+            position: relative;
+            float: left;
+            width: auto;
+            height: auto;
+            background: rgba(0, 0, 0, 0.856);
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.562);
+            .imNoT{
+                display: none;
+                @include desktop{
+                    display: block;
+                }
+            }
+            p{
+                position: absolute;
+                padding-top: 40%;
+                top: 0;
+                bottom: 0;
+                margin: 0;
+                margin-bottom: 5px;
+                font-family: sans-serif;
+                opacity: 0;
+                text-align: center;
+                align-items: center;
+                color: white;
+                text-shadow: 2px 2px 2px black;
+                &:hover{
+                    visibility: visible;
+                    opacity: 3;
+                    background-color: rgba(0, 0, 0, 0.247);
+                }   
+            }
+            .imLar{
+                &:hover{
+                    opacity: 0.5;
+                    background-color: black;
+
+                }
+            }
+            }
+        }
+
+        }
+

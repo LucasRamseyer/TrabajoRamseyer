@@ -1,4 +1,9 @@
 $color-headfoot: rgba(231, 226, 226, 0.205);
+$color-foot: rgba(0, 0, 0, 0.651);
+
+
+
+@import "fonts";
 
 //mixin
 @mixin font-text {
@@ -7,9 +12,9 @@ $color-headfoot: rgba(231, 226, 226, 0.205);
 }
 
 //extend
-%estilos{
-    font-family: 'Water Brush', cursive;
-    font-size: 6rem;
+%fCenter{
+    display: flex;
+    justify-content: center;
 };
 //map
-$mapa:(borde-solid:black 0.5px solid, borde-puntiti: black 1.2px dotted, borde-sfino: black 0.2px solid)
+$font:(Caveat:('Caveat', cursive), Kalam:('Kalam', cursive));

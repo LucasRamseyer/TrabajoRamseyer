@@ -15,70 +15,82 @@
 </head>
 <body>
     <div class="body">
-        <header class="header">
-          <a class="logazo" href="../index.html"><img src="../img/logo2.png" alt="logo"></a>
-          <h1>Frida Amoblamientos</h1>
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="../index.html">Inicio</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
-                  </li>
-                  
-                  <li class="nav-item dropdown ">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Trabajos
-                    </a>
-                    <ul class="dropdown-menu navDrop" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="trabajos.html">Por ahora aca nomas</a></li>
-                      <li><a class="dropdown-item nav-link disabled" href="#">Iria cocina</a></li>
-                      <li><a class="dropdown-item nav-link disabled" href="#">otros tipos de trabajos</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="material.html">Material</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contacto.html">Contacto</a>
-                  </li>
-                </ul>
-              </div>
+      <header>
+        <a class="logazo" href="../index.html"><img src="../img/logo.png" alt="logo"></a>
+        <div class="redes">
+          <a href="https://www.instagram.com/fridamuebles/" target="_blanck"><img src="../img/insta.png" alt="insta"></a>
+          <a href="https://www.facebook.com/fridaamoblamientos" target="_blank"><img src="../img/face.png" alt="facebok"></a>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light nave">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 nave1">
+                <li class="nav-item">
+                  <a class="nav-link" href="Nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="trabajos.html">Trabajos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="material.html">Material</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+              </ul>
             </div>
-          </nav>
-        </header>
+          </div>
+        </nav>
+
+    </header>
         
-        <main class="mainNos">
-            <h2>
+    <main class="mainNos">
+            <h1>
                 Nosotros
-            </h2>
-            <div class="divMainN">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime labore officia nobis a eos voluptates beatae nulla qui earum eligendi facere eveniet tempore repellat, rerum quod, iste ratione consequuntur vero?
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, quae cum. Dolorum repellendus, delectus voluptatem porro a cupiditate, est dicta illo asperiores, facilis atque veniam fugiat beatae sequi debitis! Magnam!
-                </p>
-            </div>
-        
-        <div class="sectionN">
-            <img class="imageNos" src="../img/mueble1.png" alt="imagen">
+            </h1>
             <p class="pSectionNosotros">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos totam itaque quo eaque! Dicta dolores qui autem aspernatur quibusdam natus temporibus cumque ad, laborum tenetur aliquid facilis, tempore ipsa consequuntur?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus perferendis non cumque, est neque accusamus similique eius, adipisci error officiis illo aperiam sed omnis harum excepturi. Adipisci cumque pariatur optio?
+                Frida muebles nace en 2008 como un espacio de diseño que se dedica a desarrollar amoblamientos para la vida cotidiana. Desde entonces, continuamos ampliando nuestro conocimiento, estando presente en diversos ámbitos y espacios. La necesidad de una constante innovación y los permanentes cambios de las necesidades del cliente nos permite mejorar día a día. Con el objetivo de satisfacer esa demanda, en un marco de confianza y honestidad, trabajamos permanentemente.
             </p>
+            <img class="imageNos" src="../img/mueble1.jpg" alt="imagen">
+            <div class="carroContainer">
+              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../img/mueble1.jpg" class="d-block w-100" alt="mueble1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../img/mueble2.jpg" class="d-block w-100" alt="mueble2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../img/mueble3.jpg" class="d-block w-100" alt="mueble3">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
         </div>
         </main>
         <footer>
-          <div class="footer">
-              <h3>Todos los derechos reservados</h3>
-              <a class="logoF" href="https://www.instagram.com/fridamuebles/" target="_blank"><img src="../img/instaLogo.png" alt="insta"></a>
+              <h2>Todos los derechos reservados</h2>
               <p>
                   Creado por
                   <a href="https:/www.instagram.com/LucasRamseyer" target="_blank">Lucas Ramseyer </a>
               </p>
-          </div>
         </footer>
     </div>
     
