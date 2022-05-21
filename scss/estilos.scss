@@ -17,3 +17,6 @@
 body{
     background-image: linear-gradient(to left, grey, #dfdfe7, grey);
 }
+::selection{
+    background-color: rgba(128, 128, 128, 0.432);
+}

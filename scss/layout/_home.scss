@@ -13,12 +13,13 @@ main{
     }
     p{
         @extend %fCenter;
-        margin: 2rem;
+        margin: 1rem;
         text-align: center;
     }
     .divLargo{
         display: flex;
         justify-content: space-around;
+        
         .imgInc{
             position: relative;
             float: left;
@@ -26,6 +27,10 @@ main{
             height: auto;
             background: rgba(0, 0, 0, 0.856);
             box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.562);
+            margin: 2px;
+            @include desktop{
+                margin: 0;
+            }
             .imNoT{
                 display: none;
                 @include desktop{
@@ -39,7 +44,6 @@ main{
                 bottom: 0;
                 margin: 0;
                 margin-bottom: 5px;
-                font-family: sans-serif;
                 opacity: 0;
                 text-align: center;
                 align-items: center;

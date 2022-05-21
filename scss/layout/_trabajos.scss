@@ -2,5 +2,14 @@
 @import "../utilities/variables";
 @import "queries";
 .carro{
-    margin: 2rem 5rem 2rem 5rem;  
+    margin: 2rem 5rem 2rem 5rem;
+    border: 2px black groove;  
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.61);
+    transform: scale(1.27);
+    @include tablet{
+        transform: scale(1.16);
+    }    
+    @include desktop {
+        transform: scale(1);
+    }
     }
