@@ -13,6 +13,7 @@
 
     .textoContacto{
         grid-area: texto;
+        @extend %kalam;
         
     .mapa{
         grid-area: mapa;
